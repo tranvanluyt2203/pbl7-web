@@ -1,0 +1,58 @@
+.header_container {
+    background-color: #207bc1;
+    color           : white;
+    width           : 100%;
+    height          : 64px;
+    display         : flex;
+    gap             : 64px;
+    padding         : 12px 0;
+
+    >div {
+        height: inherit;
+    }
+
+    .logo_container {
+        width          : 20%;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+    }
+
+    .search_bar_container {
+        background-color: white;
+        width           : 45%;
+        border-radius   : 20px;
+        border          : 2px solid #000;
+        display         : flex;
+        align-items     : center;
+        flex-wrap       : nowrap;
+        gap             : 9px;
+
+        input {
+            margin-left: 24px;
+            width      : 100%;
+            border     : none;
+            padding    : 12px 0;
+        }
+
+        button {
+            background: none;
+            border    : none;
+            padding   : 16px 24px 16px 0;
+            cursor    : pointer;
+        }
+
+
+    }
+
+    .account_container {
+        cursor      : pointer;
+        padding-left: 10%;
+        display     : flex;
+        align-items : center;
+
+        >i {
+            margin-right: 8px;
+        }
+    }
+}
