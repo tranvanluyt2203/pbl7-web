@@ -9,7 +9,7 @@ const ProductShopFull = () => {
           <button>Tới nơi bán</button>
         </div>
         <div className="product_name">
-          Item Name Item Name Item Name Item Name{" "}
+          Item Name Item Name Item Name Item Name
         </div>
         <div className="product_price">9.999.999đ</div>
         <div className="product_shop_count">
