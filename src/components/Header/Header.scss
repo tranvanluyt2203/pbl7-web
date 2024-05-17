@@ -1,18 +1,17 @@
 .header_container {
-    background-color: #207bc1;
-    color           : white;
-    width           : 100%;
-    height          : 64px;
-    display         : flex;
-    gap             : 64px;
-    padding         : 12px 0;
+    width  : 100%;
+    height : 64px;
+    display: flex;
+    gap    : 64px;
+    padding: 12px 0;
 
     >div {
         height: inherit;
     }
 
     .logo_container {
-        width          : 20%;
+        width          : 10%;
+        margin-left    : 64px;
         display        : flex;
         align-items    : center;
         justify-content: center;
@@ -20,7 +19,7 @@
 
     .search_bar_container {
         background-color: white;
-        width           : 45%;
+        width           : 65%;
         border-radius   : 20px;
         border          : 2px solid #000;
         display         : flex;
@@ -46,10 +45,10 @@
     }
 
     .account_container {
-        cursor      : pointer;
-        padding-left: 10%;
-        display     : flex;
-        align-items : center;
+        cursor     : pointer;
+        margin-left: 5%;
+        display    : flex;
+        align-items: center;
 
         >i {
             margin-right: 8px;
