@@ -1,0 +1,43 @@
+.product_full_container {
+    width  : 250px;
+    height : 300px;
+    border : 1px solid #ddd;
+    padding: 24px;
+
+    >div {
+        margin-bottom: 20px;
+    }
+
+    .product_image_full {
+        height    : 100px;
+        text-align: center;
+    }
+
+    .product_details {
+        text-align: center;
+
+        button {
+            background-color: #FF4200;
+            border          : none;
+            border-radius   : 20px;
+            color           : white;
+            padding         : 8px 24px;
+            cursor          : pointer;
+        }
+    }
+
+    .product_price {
+        font-weight: bold;
+        color      : #EA2F2F;
+        font-size  : 24px;
+    }
+
+    .product_shop_count {
+
+        color: #9d9d9d;
+
+        #shop_icon {
+            margin-right: 12px;
+        }
+    }
+}
