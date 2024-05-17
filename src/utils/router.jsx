@@ -1,8 +1,8 @@
 import HomePage from "../containers/User/HomePage";
-import ProductShopList from "../components/ProductShopList/ProductShopList";
+import ProductDetailItem from "../components/ProductDetailItem/ProductDetailItem";
 
 const userRoutes = [{ path: "/", component: HomePage }];
 
-const testRouters = [{ path: "/test", component: ProductShopList }];
+const testRouters = [{ path: "/test", component: ProductDetailItem }];
 
 export { userRoutes, testRouters };
