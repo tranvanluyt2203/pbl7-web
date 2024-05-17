@@ -1,8 +1,8 @@
 import HomePage from "../containers/User/HomePage";
-import Sidebar from "../components/Sidebar/Sidebar";
+import Product from "../components/Product/Product";
 
 const userRoutes = [{ path: "/", component: HomePage }];
 
-const testRouters = [{ path: "/test", component: Sidebar }];
+const testRouters = [{ path: "/test", component: Product }];
 
 export { userRoutes, testRouters };
