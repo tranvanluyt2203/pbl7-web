@@ -1,0 +1,11 @@
+.product_detail_item_container {
+    width                : 100%;
+    display              : grid;
+    grid-template-columns: auto auto;
+    padding              : 8px;
+    background-color     : #F4F4F4;
+
+    .product_detail_item_name {
+        font-weight: bold;
+    }
+}
