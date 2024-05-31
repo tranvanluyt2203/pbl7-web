@@ -12,6 +12,11 @@ const ProductBlock = () => {
             <Product></Product>
             <Product></Product>
         </div>
+        <div className="expand">
+            <a href="#">
+                Xem thêm
+            </a>
+        </div>
     </div>
     </>)
 }

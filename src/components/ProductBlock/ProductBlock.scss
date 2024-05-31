@@ -8,4 +8,22 @@
     .content{
         display: flex;
     }
+
+    .expand{
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+        padding: 28px;
+
+        a{
+            background-color: #f7f7f7;
+            padding: 15px 80px;
+            border-radius: 10px;
+            
+            &:hover{
+                background-color: #207bc1;
+                color: white;
+            }
+        }
+    }
 }
