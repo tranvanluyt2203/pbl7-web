@@ -1,0 +1,13 @@
+.homePage__container{
+    display: flex;
+    gap:32px;
+    margin-top: 28px;
+    
+    .homePage__sidebar{
+        width: 15%;
+    }
+
+    .homePage__content>div{
+        margin-bottom: 24px;
+    }
+}
