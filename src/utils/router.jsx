@@ -1,5 +1,5 @@
 import ProductBlock from "../components/ProductBlock/ProductBlock";
-import HomePage from "../containers/User/HomePage";
+import HomePage from "../containers/User/HomePage/HomePage";
 
 
 const userRoutes = [{ path: "/", component: HomePage }];
