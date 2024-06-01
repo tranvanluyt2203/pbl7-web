@@ -6,7 +6,9 @@ const userLayout = ({ children, ...props }) => {
     <div {...props}>
       <div className="UserPageContainer">
         <Header />
-        {children}
+        <div className="UserPageContent">
+          {children}
+        </div>
       </div>
     </div>
   );
