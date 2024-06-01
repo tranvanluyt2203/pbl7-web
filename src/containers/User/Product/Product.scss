@@ -1,0 +1,114 @@
+.productPage__container{
+    display: flex;
+    gap:32px;
+    
+    .productPage__sidebar{
+        width: 50%;
+    }
+
+    .productPage__content{
+        &>div{
+            padding:12px 0;
+        }
+        .productPage__header{
+            display: flex;
+            gap: 24px;
+
+            .image_col{
+                width: 100px;
+                .image{
+                    border: 1px solid #ddd;
+                    padding: 4px;
+                    height: 100px;
+                    
+                    img{
+                        object-fit: contain;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+            .imageSingle{
+                width: 300px;
+                height: 300px;
+                padding: 10px;
+                border: 1px solid #ddd;
+                
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    
+                }
+            }
+            
+            .shopRecommend{
+
+                &>div{
+                    margin-bottom: 16px;
+                }
+                .name{
+                    font-size: 24px;
+                    font-weight: bold;
+                }
+
+                .price{
+                    font-size: 16px;
+                    color:#EA2F2F;
+                    font-weight: bold;
+                }
+
+                .shopList{
+                    display: flex;
+                    gap: 16px;
+                    &>div{
+                        width: 200px;
+                    }
+                }
+            }
+        }
+        .productPage__price{
+            .filter{
+                display: flex;
+                padding: 8px 0;
+                align-items: center;
+                .count{
+                    font-weight: bold;
+                }
+                .filter_container{
+                    margin-left: auto;
+
+                    &>select{
+                        padding: 4px;
+                        border: none;
+                    }
+
+                }
+            }
+
+            .productList{
+                &>div{
+                    width: 100%;
+                    margin-bottom: 8px;
+                    border-bottom: 1px solid #ddd;
+                }
+            }
+        }
+        .productPage__info{
+            &>div{
+                padding:12px 0;
+                &>div{
+                    margin-bottom: 12px;
+                }
+                .header{
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+            }
+
+        }
+    }
+
+    
+}
