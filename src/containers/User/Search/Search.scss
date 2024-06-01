@@ -1,0 +1,48 @@
+.result__header{
+    display: flex;
+    padding: 16px 0;
+
+    .result__count{
+        span{
+            font-weight: bold;
+        }
+    }
+    .result__filter{
+        margin-left: auto;
+        display: flex;
+        gap: 16px;
+
+        .filter{
+            display: flex;
+            align-items: center;
+            select{
+                border: none;
+            }
+        }
+
+        button.filterOpen{
+            padding: 8px 16px;
+            background: none;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            i{
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+.result__filter_detail{
+    display: flex;
+    gap: 16px;
+    padding: 16px 0;
+    select{
+        border: none;
+        padding: 4px 8px;
+    }
+}
+
+.result__content{
+    display: flex;
+    flex-wrap: wrap    
+}
