@@ -1,10 +1,13 @@
+import phone from "../../assets/img/product/xvybrlcyllnt1.jpg"
 import "./ProductShopFull.scss";
 
 const ProductShopFull = () => {
   return (
     <>
       <div className="product_full_container">
-        <div className="product_image_full">Img</div>
+        <div className="product_image_full">
+        <img src={phone} alt="" />
+        </div>
         <div className="product_details">
           <button>Tới nơi bán</button>
         </div>

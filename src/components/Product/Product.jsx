@@ -1,15 +1,18 @@
+import phone from "../../assets/img/product/xvybrlcyllnt1.jpg"
 import "./Product.scss";
 
 const Product = () => {
   return (
     <>
       <div className="product_container">
-        <div className="product_image_full">Img</div>
+        <div className="product_image_full">
+          <img src={phone} alt="" />
+        </div>
         <div className="product_details">
           <button>So sánh giá</button>
         </div>
         <div className="product_name">
-          Item Name Item Name Item Name Item Name{" "}
+          Item Name Item Name Item Name Item Name
         </div>
         <div className="product_price">
           Giá từ <span>9.999.999đ</span>

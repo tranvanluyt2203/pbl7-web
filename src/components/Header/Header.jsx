@@ -1,10 +1,12 @@
 import "./Header.scss";
-
+import logo from "../../assets/img/logo.png"
 const Header = () => {
   return (
     <>
       <div className="header_container">
-        <div className="logo_container">Logo</div>
+        <div className="logo_container">
+          <a href="/"><img src={logo} alt="Logo" /></a>
+        </div>
         <div className="search_bar_container">
           <input
             type="text"

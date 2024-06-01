@@ -1,9 +1,9 @@
 .sidebar_container {
-    padding: 0 24px 24px 24px;
+    
 
     .sidebar_header {
         font-weight: bold;
-        padding    : 24px 0;
+        padding-bottom: 24px;
         font-size  : 24px;
     }
 
@@ -11,7 +11,11 @@
         margin-top: 12px;
         display   : flex;
         flex-wrap : nowrap;
-        gap       : 12px
+        gap       : 12px;
+
+        img{
+            width: 40px;
+        }
     }
 
 
