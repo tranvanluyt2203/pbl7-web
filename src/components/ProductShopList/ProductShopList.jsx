@@ -1,3 +1,5 @@
+import shopee from "../../assets/img/shop/shopee.png"
+
 import "./ProductShopList.scss";
 
 const ProductShopList = () => {
@@ -5,7 +7,9 @@ const ProductShopList = () => {
     <>
       <div className="product_list_container">
         <div className="product_shop">
-          <div className="product_shop_avt">avt</div>
+          <div className="product_shop_avt">
+            <img src={shopee} alt="ShopLogo" />
+          </div>
           <div className="product_shop_name">example.com</div>
         </div>
         <div className="product_name">
