@@ -1,5 +1,5 @@
 import userLayout from "./layout/userLayout/userLayout";
-import { userRoutes, testRouters } from "./utils/router";
+import { userRoutes, testRouters, anonymousRoutes } from "./utils/router";
 import { Routes, Route } from "react-router-dom";
 
 const RouterCustom = () => {
@@ -21,6 +21,13 @@ const RouterCustom = () => {
             ></Route>
           );
         })}
+        {anonymousRoutes.map((route, index) => {
+          const Page = route.component;
+          return (
+            <Route key={index} path={route.path} element={<Page />}></Route>
+          );
+        })}
+        
         {testRouters.map((route, index) => {
           const Page = route.component;
           return (
