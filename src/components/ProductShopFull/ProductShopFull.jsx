@@ -1,4 +1,5 @@
-import phone from "../../assets/img/product/xvybrlcyllnt1.jpg"
+import phone from "../../assets/img/product/xvybrlcyllnt1.jpg";
+import shopee_icon from "../../assets/img/shop/shopee_icon.png";
 import "./ProductShopFull.scss";
 
 const ProductShopFull = () => {
@@ -6,7 +7,7 @@ const ProductShopFull = () => {
     <>
       <div className="product_full_container">
         <div className="product_image_full">
-        <img src={phone} alt="" />
+          <img src={phone} alt="" />
         </div>
         <div className="product_details">
           <button>Tới nơi bán</button>
@@ -16,8 +17,12 @@ const ProductShopFull = () => {
         </div>
         <div className="product_price">9.999.999đ</div>
         <div className="product_shop_count">
-          <span id="shop_icon">avt</span>
-          example.com
+          <a href="http://shopee.com">
+            <span id="shop_icon">
+              <img src={shopee_icon} alt="Shop Mini Icon" />
+            </span>
+            <span>shopee.com</span>
+          </a>
         </div>
       </div>
     </>
