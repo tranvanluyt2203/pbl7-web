@@ -1,17 +1,24 @@
-.product_container {
+.product_full_container {
     width  : 250px;
     border : 1px solid #ddd;
     padding: 24px;
 
-    >div {
+    &>div {
         margin-bottom: 20px;
+
     }
+
+    &>:last-child {
+        margin-bottom: 0;
+    }
+
+
 
     .product_image_full {
         height    : 150px;
         text-align: center;
-        
-        img{
+
+        img {
             width: 200px;
         }
     }
@@ -30,20 +37,51 @@
     }
 
     .product_price {
-        font-weight: bold;
-        color      : #EA2F2F;
-        font-size: 24px;
+        &>div {
+            margin-bottom: 4px;
+        }
+
+        .promo_price {
+            font-weight: bold;
+            color      : #EA2F2F;
+            font-size  : 24px;
+        }
+
+        .price_original {
+            display    : flex;
+            gap        : 12px;
+            align-items: center;
+
+            .original {
+                text-decoration: line-through;
+                color          : rgba(0, 0, 0, .26);
+            }
+
+            .discount {
+                width           : fit-content;
+                padding         : 4px 8px;
+                color           : rgb(238, 77, 45);
+                background-color: rgb(254, 238, 234);
+            }
+        }
     }
 
     .product_shop_count {
-        #shop_icon {
-            margin-right: 12px;
-        }
 
-        #shop_count {
-            font-weight: bold;
-            color      : #EA2F2F;
-            font-size  : 18px;
+        color: #9d9d9d;
+
+        a {
+
+            display    : flex;
+            align-items: center;
+
+            #shop_icon {
+                margin-right: 12px;
+
+                img {
+                    width: 20px;
+                }
+            }
         }
     }
 }

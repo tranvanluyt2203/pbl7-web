@@ -1,4 +1,4 @@
-import ProductShopFull from "../../../components/ProductShopFull/ProductShopFull";
+import Product from "../../../components/Product/Product";
 import "./Search.scss";
 
 const Search = () => {
@@ -31,14 +31,15 @@ const Search = () => {
         </select>
       </div>
       <div className="result__content">
-        <ProductShopFull></ProductShopFull>
-        <ProductShopFull></ProductShopFull>
-        <ProductShopFull></ProductShopFull>
-        <ProductShopFull></ProductShopFull>
-        <ProductShopFull></ProductShopFull>
-        <ProductShopFull></ProductShopFull>
-        <ProductShopFull></ProductShopFull>
-        <ProductShopFull></ProductShopFull>
+        <Product></Product>
+        <Product></Product>
+        <Product></Product>
+        <Product></Product>
+        <Product></Product>
+        <Product></Product>
+        <Product></Product>
+        <Product></Product>
+        <Product></Product>
       </div>
     </>
   );
