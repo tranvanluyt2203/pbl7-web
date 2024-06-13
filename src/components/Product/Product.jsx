@@ -9,13 +9,13 @@ const Product = () => {
           <img src={phone} alt="" />
         </div>
         <div className="product_details">
-          <button>So sánh giá</button>
+          <a href="#" className="goto_button">Xem ngay</a>
         </div>
         <div className="product_name">
           Item Name Item Name Item Name Item Name
         </div>
         <div className="product_price">
-          Giá từ <span>9.999.999đ</span>
+          9.999.999đ
         </div>
         <div className="product_shop_count">
           <span id="shop_icon">
