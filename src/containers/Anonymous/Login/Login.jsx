@@ -31,10 +31,15 @@ const Login = () => {
             </form>
           </div>
           <div className="login__alter">
-            Bạn đã có tài khoản?{" "}
+            Bạn chưa có tài khoản?{" "}
             <span>
-              <a href="#">Đăng nhập ngay</a>
+              <a href="/register">Đăng kí ngay</a>
             </span>
+          </div>
+          <div className="back">
+            <a href="/">
+              <i className="fa-solid fa-house"></i>Về trang chủ
+            </a>
           </div>
         </div>
       </div>

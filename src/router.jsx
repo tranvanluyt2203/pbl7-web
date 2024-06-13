@@ -15,7 +15,7 @@ const RouterCustom = () => {
               path={route.path}
               element={
                 <Layout>
-                  <Page />
+                  <Page {...(route.isCategory ? { isCategory: route.isCategory } : {})} />
                 </Layout>
               }
             ></Route>
