@@ -8,7 +8,6 @@ const ProductPage = () => {
       <div className="productPage__container">
         <div className="productPage__content">
           <div className="productPage__header">
-            
             <div className="imageSingle">
               <img src={phone} alt="" />
             </div>
@@ -16,13 +15,21 @@ const ProductPage = () => {
               <div className="name">
                 Item Name Item Name Item Name Item Name
               </div>
-              <div className="price"> 9.999.999đ </div>
+              <div className="price">
+                <div className="promo_price">9.999.999đ</div>
+                <div className="price_original">
+                  <div className="original">9.999.999đ</div>
+                  <div className="discount">-5%</div>
+                </div>
+              </div>
               <div className="link">
-                <a href="#" className="goto_button">Tới nơi bán</a>
+                <a href="#" className="goto_button">
+                  Tới nơi bán
+                </a>
               </div>
             </div>
           </div>
-          
+
           <div className="productPage__info">
             <div className="description">
               <div className="header">Thông tin sản phẩm</div>
