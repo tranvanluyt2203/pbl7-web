@@ -1,0 +1,63 @@
+.UserPage__container {
+    display  : flex;
+    flex-wrap: nowrap;
+    gap      : 32px;
+
+    &>form {
+        
+
+        &>* {
+            display: block;
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input {
+            margin-bottom: 16px;
+            padding      : 8px 16px;
+            width        : 80%;
+        }
+
+        button {
+            margin-top      : 36px;
+            border-radius   : 10px;
+            padding         : 12px;
+            background-color: #0096c7;
+            color           : white;
+            border          : none;
+            cursor          : pointer;
+
+            &:hover {
+                background-color: #0077d6;
+            }
+        }
+
+        .groupInput {
+            width        : 80%;
+            display      : flex;
+            flex-wrap    : nowrap;
+            align-items  : center;
+            gap          : 12px;
+            margin-bottom: 16px;
+
+            span {
+                font-size: 40px;
+            }
+
+            input {
+                margin-bottom: 0;
+                width        : 100%;
+            }
+        }
+    }
+
+    #modify-info-form{
+        width: 50%;
+    }
+    #change-password-form{
+        margin-left: auto;
+        width: 30%;
+    }
+}
