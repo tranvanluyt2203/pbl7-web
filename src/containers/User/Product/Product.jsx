@@ -1,7 +1,3 @@
-import Sidebar from "../../../components/Sidebar/Sidebar";
-import ProductShopShort from "../../../components/ProductShopShort/ProductShopShort";
-import ProductShopList from "../../../components/ProductShopList/ProductShopList";
-import ProductDetailItem from "../../../components/ProductDetailItem/ProductDetailItem";
 import phone from "../../../assets/img/product/xvybrlcyllnt1.jpg";
 
 import "./Product.scss";
@@ -12,65 +8,22 @@ const ProductPage = () => {
       <div className="productPage__container">
         <div className="productPage__content">
           <div className="productPage__header">
-            <div className="image_col">
-              <div className="image">
-                <img src={phone} alt="" />
-              </div>
-              <div className="image">
-                <img src={phone} alt="" />
-              </div>
-              <div className="image">
-                <img src={phone} alt="" />
-              </div>
-            </div>
+            
             <div className="imageSingle">
               <img src={phone} alt="" />
             </div>
-            <div className="shopRecommend">
+            <div className="info">
               <div className="name">
                 Item Name Item Name Item Name Item Name
               </div>
-              <div className="price">Giá chỉ từ: 9.999.999đ </div>
-              <div className="shopList">
-                <ProductShopShort></ProductShopShort>
-                <ProductShopShort></ProductShopShort>
-                <ProductShopShort></ProductShopShort>
-                <ProductShopShort></ProductShopShort>
+              <div className="price"> 9.999.999đ </div>
+              <div className="link">
+                <a href="#" className="goto_button">Tới nơi bán</a>
               </div>
             </div>
           </div>
-          <div className="productPage__price">
-            <div className="filter">
-              <div className="count">Giá của 100 nơi bán</div>
-              <div className="filter_container">
-                <select name="sortSelect" id="sortSelect">
-                  <option value="1">Giá từ cao đến thấp</option>
-                  <option value="2">Giá từ thấp đến cao</option>
-                </select>
-              </div>
-            </div>
-            <div className="productList">
-              <ProductShopList></ProductShopList>
-              <ProductShopList></ProductShopList>
-              <ProductShopList></ProductShopList>
-              <ProductShopList></ProductShopList>
-              <ProductShopList></ProductShopList>
-              <ProductShopList></ProductShopList>
-              <ProductShopList></ProductShopList>
-            </div>
-          </div>
+          
           <div className="productPage__info">
-            <div className="infoTable">
-              <div className="header">Thông số kĩ thuật</div>
-              <div className="content">
-                <ProductDetailItem></ProductDetailItem>
-                <ProductDetailItem></ProductDetailItem>
-                <ProductDetailItem></ProductDetailItem>
-                <ProductDetailItem></ProductDetailItem>
-                <ProductDetailItem></ProductDetailItem>
-                <ProductDetailItem></ProductDetailItem>
-              </div>
-            </div>
             <div className="description">
               <div className="header">Thông tin sản phẩm</div>
               <div className="content">

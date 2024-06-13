@@ -14,20 +14,7 @@
             display: flex;
             gap: 24px;
 
-            .image_col{
-                width: 100px;
-                .image{
-                    border: 1px solid #ddd;
-                    padding: 4px;
-                    height: 100px;
-                    
-                    img{
-                        object-fit: contain;
-                        height: 100%;
-                        width: 100%;
-                    }
-                }
-            }
+            
             .imageSingle{
                 width: 300px;
                 height: 300px;
@@ -43,7 +30,7 @@
                 }
             }
             
-            .shopRecommend{
+            .info{
 
                 &>div{
                     margin-bottom: 16px;
@@ -54,17 +41,13 @@
                 }
 
                 .price{
-                    font-size: 16px;
+                    font-size: 24px;
                     color:#EA2F2F;
                     font-weight: bold;
-                }
+                }                
 
-                .shopList{
-                    display: flex;
-                    gap: 16px;
-                    &>div{
-                        width: 200px;
-                    }
+                .link{
+                    margin-top: 32px;
                 }
             }
         }
