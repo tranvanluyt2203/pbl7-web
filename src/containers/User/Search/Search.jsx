@@ -1,14 +1,61 @@
 import Product from "../../../components/Product/Product";
+import {
+  getProductByID,
+  getProductInCategory,
+} from "../../../service/userService";
 import "./Search.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const Search = ({ isCategory }) => {
   const { id } = useParams();
   const [isFilterShow, setFilterShow] = useState(false);
+  const [productList, setProductsList] = useState([]);
+  const [productRawData, setProductRawData] = useState([]);
+  const [productsData, setProductsData] = useState([]);
+  const [count, setCount] = useState(12);
   const FilterOnOff = () => {
     setFilterShow(!isFilterShow);
   };
+
+  const expand = () => {
+    console.log(productsData)
+    if (count + 12 > productRawData.length) {
+      setProductsData(productRawData);
+      setCount(productRawData.length);
+    } else {
+      setProductsData(productRawData.slice(0, count + 12));
+      setCount(count + 12);
+    }
+  };
+  useEffect(() => {
+    if (isCategory) {
+      const fetchProductList = async () => {
+        const res = await getProductInCategory(id);
+        if (res.status === 200) {
+          setProductsList(res.data.data.result);
+        }
+      };
+      fetchProductList();
+    }
+  }, []);
+
+  useEffect(() => {
+    if (productList.length > 0) {
+      const fetchProducts = async () => {
+        const promises = productList.map(async (element) => {
+          const res = await getProductByID(element);
+          if (res.status === 200) return res.data.data.detailProduct;
+        });
+        const products = await Promise.all(promises);
+        const filteredProducts = products.filter((product) => product); // Filter out undefined values
+        setProductRawData(filteredProducts);
+        setProductsData(filteredProducts.slice(0, 12)); // Update productsData with the first 12 items
+      };
+
+      fetchProducts();
+    }
+  }, [productList]);
   return (
     <>
       {isCategory && (
@@ -59,15 +106,12 @@ const Search = ({ isCategory }) => {
         </>
       )}
       <div className="result__content">
-        <Product></Product>
-        <Product></Product>
-        <Product></Product>
-        <Product></Product>
-        <Product></Product>
-        <Product></Product>
-        <Product></Product>
-        <Product></Product>
-        <Product></Product>
+        {productsData.map((item, index) => (
+          <Product key={index} data={item} />
+        ))}
+      </div>
+      <div className="expand">
+        <button onClick={expand}>Xem thêm</button>
       </div>
     </>
   );

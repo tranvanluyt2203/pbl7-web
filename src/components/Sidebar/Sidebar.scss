@@ -8,14 +8,14 @@
     }
 
     .sidebar_item {
-        margin-top: 12px;
+        margin-top: 24px;
         display   : flex;
         flex-wrap : nowrap;
         gap       : 12px;
         align-items: center;
-
-        img{
-            width: 40px;
+        &>:hover{
+            font-weight: bold;
+            color: rgb(0, 209, 209);
         }
     }
 
