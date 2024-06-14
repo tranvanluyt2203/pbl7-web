@@ -1,8 +1,30 @@
 import "./Header.scss";
 import logo from "../../assets/img/logo.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { logout } from "../../service/userService";
 const Header = () => {
+  const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(false);
+  const logOut = async () => {
+    const res = await logout();
+    if (res.status === 200) {
+      localStorage.removeItem("token");
+      localStorage.removeItem("profile");
+      setIsLogin(false);
+      navigate("/");
+      toast.success("Đăng xuất thành công");
+    } else {
+      toast.error("Có lỗi xảy ra, vui lòng thử lại lại");
+    }
+  };
+  useEffect(() => {
+    const profile = localStorage.getItem("profile");
+    if (profile !== null) {
+      setIsLogin(true);
+    }
+  }, []);
   return (
     <>
       <div className="header_container">
@@ -26,16 +48,16 @@ const Header = () => {
           {isLogin ? (
             <>
               <div className="account">
-                <a href="#">
+                <a href="/myinfo">
                   <i className="fa-solid fa-user"></i>
-                  username
+                  Cập nhật thông tin
                 </a>
               </div>
               <div className="logout">
-                <a href="#">
+                <button onClick={logOut}>
                   <i className="fa-solid fa-right-from-bracket"></i>
                   Đăng xuất
-                </a>
+                </button>
               </div>
             </>
           ) : (
