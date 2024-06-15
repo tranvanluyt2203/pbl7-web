@@ -38,20 +38,24 @@ const updateUserPassword = (old_password, new_password) => {
 };
 
 const getCategories = () => {
-    return instance.get("api/v1/get_categories")
-}
+  return instance.get("api/v1/get_categories");
+};
 
 const getRecommended = () => {
-    return instance.get("api/v1/product_recommender")
-}
+  return instance.get("api/v1/product_recommender");
+};
 
 const getProductByID = (id) => {
-    return instance.get("api/v1/get_detail_product_by_id/?productId=" + id)
-}
+  return instance.get("api/v1/get_detail_product_by_id/?productId=" + id);
+};
 
 const getProductInCategory = (id) => {
-    return instance.get("api/v1/get_list_id_products_from_category?name=" + id)
-}
+  return instance.get("api/v1/get_list_id_products_from_category?name=" + id);
+};
+
+const getProductByName = (name) => {
+  return instance.get("/api/v1/search_product_by_name?find=" + name);
+};
 
 export {
   login,
@@ -63,5 +67,6 @@ export {
   getCategories,
   getRecommended,
   getProductByID,
-  getProductInCategory
+  getProductInCategory,
+  getProductByName,
 };

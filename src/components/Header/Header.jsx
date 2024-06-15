@@ -7,7 +7,13 @@ import { logout } from "../../service/userService";
 const Header = () => {
   const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(false);
+  const find  = async () => {
+    let context = document.getElementById('header_search').value;
+    navigate('/search/'+context)
+  }
   const logOut = async () => {
+    // localStorage.removeItem("token");
+    // localStorage.removeItem("profile");
     const res = await logout();
     if (res.status === 200) {
       localStorage.removeItem("token");
@@ -40,7 +46,7 @@ const Header = () => {
             id="header_search"
             placeholder="Bạn muốn tìm gì?"
           />
-          <button type="submit">
+          <button type="submit" onClick={find}>
             <i className="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>

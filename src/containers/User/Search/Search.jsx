@@ -1,6 +1,7 @@
 import Product from "../../../components/Product/Product";
 import {
   getProductByID,
+  getProductByName,
   getProductInCategory,
 } from "../../../service/userService";
 import "./Search.scss";
@@ -38,6 +39,15 @@ const Search = ({ isCategory }) => {
       };
       fetchProductList();
     }
+    else{
+      const fetchProductList = async () => {
+        const res = await getProductByName(id);
+        if (res.status === 200) {
+          setProductsList(res.data.data.result);
+        }
+      };
+      fetchProductList();
+    }
   }, []);
 
   useEffect(() => {
@@ -67,11 +77,11 @@ const Search = ({ isCategory }) => {
         <div className="result__count">
           {isCategory ? (
             <>
-              Có <span>1.234.567</span> sản phẩm
+              Có <span>{productRawData.length}</span> sản phẩm
             </>
           ) : (
             <>
-              Có <span>1.234.567</span> kết quả cho <span>điện thoại</span>
+              Có <span>{productRawData.length}</span> kết quả cho <span>{id}</span>
             </>
           )}
         </div>

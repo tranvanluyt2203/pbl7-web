@@ -5,7 +5,7 @@ NProgress.configure({
   trickleSpeed: 200,
 });
 const instance = axios.create({
-  baseURL: "http://127.0.0.1:5000",
+  baseURL: "https://bfb-pbl7.xyz",
 });
 
 // Add a request interceptor

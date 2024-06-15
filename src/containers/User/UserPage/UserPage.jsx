@@ -86,7 +86,7 @@ const UserPage = () => {
   });
 
   useEffect(() => {
-    if (infoFormik.values.fullname === "") {
+    if (infoFormik.values.email === "") {
       infoFormik.setValues({
         avatar: user.avatar || "",
         fullname: user.fullname || "",

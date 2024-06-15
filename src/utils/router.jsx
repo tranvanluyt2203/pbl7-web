@@ -6,8 +6,8 @@ import UserPage from "../containers/User/UserPage/UserPage";
 
 const userRoutes = [
   { path: "/", component: HomePage },
-  { path: "/search", component: Search },
   { path: "/category/:id", component: Search, isCategory: true },
+  { path: "/search/:id", component: Search, isCategory: false },
   { path: "/myinfo", component: UserPage },
 ];
 
